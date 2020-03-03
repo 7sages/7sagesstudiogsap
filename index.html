@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=DM+Serif+Text&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="back">
+        
+            <div id="bar1"></div>
+            <div id="bar2"></div>
+            <div id="bar3"></div>
+            <div id="bar4"></div>
+        <!-- </div> -->
+        <div id="left">
+            <i class="fa fa-bars"></i>
+            <p class="rotate">Social media</p>
+            <p class="rotate">01/05</p>
+            <div id="social">
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-facebook"></i>
+            </div>
+        </div>
+        <div id="right">
+            <div id="overlay">
+                <div id="topnav">
+                    <h2>Noice</h2>
+                    <div id="links">
+                        <a href="#">work</a>
+                        <a href="#">about</a>
+                        <p>7sages@studio.folio</p>
+                    </div>
+                </div>
+                <div id="bar">
+                <h1>Design <br>Thinking <br>Overnights </h1></div>
+                <div id="box">
+                    <div id="text">
+                    <div id="line"></div>
+                    <h4>when the morning dawns</h4></div>              
+                </div>
+                <div id="rightelem">
+                    <div id="image"></div>
+                    <div id="dets">
+                        <h5>next article</h5>
+                        <p>The idea of god is not hencefoth relevent</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+    <script>
+        var tl = new TimelineMax()
+        tl
+        .fromTo('#bar1',2,{
+            width : '100%'
+        },{
+            width: '0%',
+            ease : Expo.easeInOut
+        })
+        .fromTo('#bar2',2,{
+            right: '0'
+        },{
+            right: '-100%',
+            ease : Expo.easeInOut
+        },'-=2')
+        .fromTo('#bar3',2,{
+            width : '100%'
+        },{
+            width: '0%',
+            ease : Expo.easeInOut
+        },'=-2')
+        .fromTo('#bar4',2,{
+            right: '0'
+        },{
+            right: '-100%',
+            ease : Expo.easeInOut
+        },'-=2')
+        .fromTo('#left',2,{
+            left: '-100%'
+        },{
+            left: '0',
+            ease : Expo.easeInOut
+        },'-=0.7')
+        .fromTo('#right',1.5,{
+            opacity: 0
+        },{
+            opacity: '1',
+            // ease : Expo.easeInOut
+        },'-=0.5')
+        .fromTo('#topnav h2',4,{
+            opacity: 0
+        },{
+            opacity: '1',
+            // ease : Expo.easeInOut
+        })
+        .fromTo('#links a,p',1.5,{
+            top: '100%',
+        },{
+            top: 0,
+            ease : Expo.easeInOut
+        },'-=4')
+        .fromTo('#bar h1',1,{
+            left : '-100%'
+        },{
+            left: '0',
+            ease : Expo.easeInOut
+        },'=-3')
+        .fromTo('#box',1.5,{
+            left : '-100%'
+        },{
+            left: '-5%',
+            ease : Expo.easeInOut
+        },'=-3')
+        .fromTo('#text',1.5,{
+            left : '-100%'
+        },{
+            left: '50%',
+            ease : Expo.easeInOut
+        },'-=2')
+        .fromTo('#rightelem #image',1.5,{
+            right : '100%'
+        },{
+            right: '0%',
+            ease : Expo.easeInOut
+        },'-=1.5')
+        .fromTo('#dets h5',2,{
+            right : '100%'
+        },{
+            right: '0%',
+            ease : Expo.easeInOut
+        },'-=1.5')
+        .fromTo('#dets p',2,{
+            right : '100%'
+        },{
+            right: '0%',
+            ease : Expo.easeInOut
+        },'-=1')
+    </script>   
+</body>
+</html>
